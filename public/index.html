@@ -1,79 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini CRM</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Client Lead Management System</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
+
 <body>
+
+<div class="hero">
+
+    <h1>
+        <i class="fa-solid fa-chart-line"></i>
+        Client Lead Management System
+    </h1>
+
+    <p>
+        Manage, track and convert customer leads efficiently.
+    </p>
+
+</div>
 
 <div class="container">
 
-    <h1>📋 Client Lead Management System</h1>
-
     <div class="dashboard">
-        <div class="card1">
+
+        <div class="card1 total">
+
+            <i class="fa-solid fa-users"></i>
+
             <h3>Total Leads</h3>
+
             <p id="totalLeads">0</p>
+
         </div>
 
-        <div class="card1">
+        <div class="card1 contacted">
+
+            <i class="fa-solid fa-phone"></i>
+
             <h3>Contacted</h3>
+
             <p id="contactedLeads">0</p>
+
         </div>
 
-        <div class="card1">
+        <div class="card1 converted">
+
+            <i class="fa-solid fa-user-check"></i>
+
             <h3>Converted</h3>
+
             <p id="convertedLeads">0</p>
+
         </div>
+
     </div>
 
     <form id="leadForm">
 
-        <input
-            type="text"
-            id="name"
-            placeholder="Client Name"
-            required
-        >
+        <h2>Add New Lead</h2>
 
         <input
-            type="email"
-            id="email"
-            placeholder="Client Email"
-            required
-        >
+        type="text"
+        id="name"
+        placeholder="Client Name"
+        required>
 
         <input
-            type="text"
-            id="source"
-            placeholder="Lead Source"
-            required
-        >
+        type="email"
+        id="email"
+        placeholder="Client Email"
+        required>
+
+        <input
+        type="text"
+        id="source"
+        placeholder="Lead Source"
+        required>
 
         <select id="status">
-            <option value="New">New</option>
-            <option value="Contacted">Contacted</option>
-            <option value="Converted">Converted</option>
+
+            <option value="New">
+                New
+            </option>
+
+            <option value="Contacted">
+                Contacted
+            </option>
+
+            <option value="Converted">
+                Converted
+            </option>
+
         </select>
 
         <textarea
-            id="notes"
-            placeholder="Notes"
-        ></textarea>
+        id="notes"
+        placeholder="Lead Notes">
+        </textarea>
 
         <button type="submit">
+
+            <i class="fa-solid fa-plus"></i>
+
             Add Lead
+
         </button>
 
     </form>
 
-    <h2>Lead Records</h2>
+    <h2 class="record-title">
+
+        <i class="fa-solid fa-address-book"></i>
+
+        Lead Records
+
+    </h2>
 
     <div id="leadList"></div>
 
 </div>
+
+<footer>
+
+    Developed by Navya 
+
+</footer>
 
 <script src="script.js"></script>
 
